@@ -1,7 +1,7 @@
 class CreateCarts < ActiveRecord::Migration[5.1]
   def change
     create_table :carts do |t|
-      t.references :product_id, foreign_key: true
+      t.references :product, foreign_key: true
       t.integer :qty
 
       t.timestamps
